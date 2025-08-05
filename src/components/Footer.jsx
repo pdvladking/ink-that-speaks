@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-6 px-6">
+    <footer className="bg-[var(--background)] text-[var(--foreground)] py-6 px-6 border-t border-[var(--accent)]">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm">
         <p className="mb-2 sm:mb-0">
           &copy; {new Date().getFullYear()} Ink That Speaks. All rights
@@ -11,14 +11,16 @@ export default function Footer() {
             href="https://www.instagram.com/lmr_zeppster/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-300"
+            className="transition hover:text-[var(--accent)]"
           >
             Instagram
           </a>
-          <a href="mailto:yourstudio@email.com" className="hover:text-gray-300">
+          <a
+            href="mailto:yourstudio@email.com"
+            className="transition hover:text-[var(--accent)]"
+          >
             Email
           </a>
-          {/* Optional: Add LinkedIn or Behance if relevant */}
         </div>
       </div>
     </footer>

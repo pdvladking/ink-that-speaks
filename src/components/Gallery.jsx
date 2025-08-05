@@ -11,13 +11,16 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-20 px-6 bg-black text-white">
+    <section
+      id="gallery"
+      className="py-20 px-6 bg-[var(--section-alt)] text-[var(--foreground)] border-t border-b border-[var(--accent)]"
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-4xl font-bold text-center mb-10 tracking-tight"
+        className="text-4xl font-bold text-center mb-10 tracking-tight accent glow"
       >
         Gallery
       </motion.h2>
@@ -29,8 +32,12 @@ export default function Gallery() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-            className="overflow-hidden rounded-lg shadow-lg"
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+              delay: index * 0.1,
+            }}
+            className="overflow-hidden rounded-lg shadow-lg border border-[var(--accent)]"
           >
             <img
               src={src}

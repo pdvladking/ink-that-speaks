@@ -2,14 +2,17 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-6 bg-black text-white">
+    <section
+      id="contact"
+      className="py-20 px-6 bg-[var(--section-alt)] text-[var(--foreground)] border-t border-b border-[var(--accent)]"
+    >
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-4xl font-bold mb-6 tracking-tight"
+          className="text-4xl font-bold mb-6 tracking-tight accent glow"
         >
           Book a Session
         </motion.h2>
@@ -29,7 +32,7 @@ export default function Contact() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           href="mailto:yourstudio@email.com"
-          className="inline-block bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
+          className="inline-block bg-[var(--foreground)] text-[var(--background)] px-6 py-3 rounded-full font-semibold hover:bg-[var(--accent)] transition"
         >
           Email Us
         </motion.a>
